@@ -9,15 +9,13 @@ body {
     background: #AEC6CF
 }
 
-
 main {
     flex: 1;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 100px; 
-    padding-bottom: 100px; 
-    position: relative;
+    flex-direction: column; /* Align children in a column */
+    align-items: center; /* Center children horizontally */
+    padding-top: 100px; /* Adjust to the height of your header */
+    padding-bottom: 100px; /* Adjust to the height of your footer */
     width: 100%;
 }
 
@@ -86,8 +84,60 @@ footer {
 }
 
 .naslovna-image {
-    max-width: 100%;
+    width: 90%;
     height: auto;
-    margin-top: 8%; 
-    margin-bottom: 8%; 
+    margin-bottom: 50px;
+    margin-left: 10px;    
+    margin-top: 0px;
+
 }
+
+.toy-cards-container {
+    width: 100%; /* Adjust width as necessary */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px; /* Creates space between the cards */
+}
+
+.toy-card {
+    width: 300px; /* Fixed width or use percentage for responsiveness */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.toy-card:hover {
+    transform: translateY(-5px); /* Simple hover effect */
+}
+
+.toy-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.toy-info {
+    padding: 15px;
+}
+
+.toy-title {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.toy-description {
+    font-size: 1em;
+    color: #555;
+}
+
+
+
+
+
+
+
+
+
