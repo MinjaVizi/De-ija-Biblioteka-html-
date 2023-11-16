@@ -6,8 +6,8 @@ body {
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    background: #AEC6CF
 }
+
 
 main {
     flex: 1;
@@ -18,6 +18,27 @@ main {
     padding-bottom: 100px;
     width: 100%;
 }
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+}
+
+.background-image1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+}
+
 
 header {
     background-color: #fff;
@@ -71,17 +92,16 @@ footer {
     padding: 20px;
  }
     
-.pocetna-image {
-    width: 50%; 
-    height: auto;
-    object-fit: cover; 
-    border-radius: 50px;
-}
-.pocetna-text {
-    width: 50%; 
+
+ .pocetna-text {
+    width: calc(50% - 50px); /* 100% width of the parent minus 50px padding */
+    margin-left: auto; /* Pushes the div to the right */
+    margin-right: 50px; /* Keeps it 50px from the right edge */
     color: #8b1111;
-    font-size: 1.5em; 
+    font-size: 1.5em;
+    text-align: right; /* Aligns the text to the right */
 }
+
 
 .naslovna-image {
     width: 90%;
@@ -136,11 +156,49 @@ footer {
     color: #555;
 }
 
+.rating-comment-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
 
+.star-rating {
+    direction: rtl;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
 
+.star-rating input[type="radio"] {
+    display: none;
+}
 
+.star-rating label {
+    color: #ddd;
+    cursor: pointer;
+}
 
+.star-rating label:hover,
+.star-rating label:hover ~ label,
+.star-rating input[type="radio"]:checked ~ label {
+    color: #ffc107;
+}
 
+.rating-comment-form input,
+.rating-comment-form textarea,
+.rating-comment-form button {
+    width: 100%; /* Svi elementi će biti iste širine */
+    margin-bottom: 15px; /* Razmak između elemenata */
+}
 
-
-
+.rating-comment-form button {
+    cursor: pointer;
+    background-color: #77DD77;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
