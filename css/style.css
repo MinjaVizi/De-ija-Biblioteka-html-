@@ -12,15 +12,15 @@ body {
 main {
     flex: 1;
     display: flex;
-    flex-direction: column; /* Align children in a column */
-    align-items: center; /* Center children horizontally */
-    padding-top: 100px; /* Adjust to the height of your header */
-    padding-bottom: 100px; /* Adjust to the height of your footer */
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px; 
+    padding-bottom: 100px;
     width: 100%;
 }
 
 header {
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: #fff;
     padding: 10px;
     text-align: center;
     color: #8b1111;
@@ -50,7 +50,7 @@ header nav a {
 }
 
 footer {
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: #fff;
     padding: 10px;
     text-align: center;
     color: #8b1111;
@@ -102,11 +102,14 @@ footer {
 
 .toy-card {
     width: 300px; /* Fixed width or use percentage for responsiveness */
-    border: 1px solid #ccc;
+    border: 1px solid #5CA65C ;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.2s ease-in-out;
+    margin-left: 10px;
+    margin-right: 20px;
+    background-color: #77DD77;
 }
 
 .toy-card:hover {
