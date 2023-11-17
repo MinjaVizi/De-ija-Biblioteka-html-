@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
     var commentsDiv = document.getElementById('comments');
 
     form.onsubmit = function(event) {
-        event.preventDefault(); // Prevent form from submitting the traditional way
-
+        event.preventDefault(); 
+        
         var name = document.getElementById('name').value;
         var comment = document.getElementById('comment').value;
         var rating = document.querySelector('input[name="rating"]:checked').value;
@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
         commentEntry.innerHTML = '<strong>' + name + '</strong> - ' + rating + ' stars' + '<p>' + comment + '</p>';
         commentsDiv.appendChild(commentEntry);
 
-        // Reset the form
         form.reset();
     };
 });
